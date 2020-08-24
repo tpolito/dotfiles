@@ -6,6 +6,12 @@ FormatTime, CurrentDateTime,, yyyy/M/d
 SendInput %CurrentDateTime%
 return
 
+; Opens Dev Tools in Chrome
+!a::
+SendInput {F12}
+return
+
+; Open Notepad++
 !n::
 Run, notepad++.exe, C:\Program Files\Notepad++
 return
@@ -35,6 +41,8 @@ SendInput ^v
 ; This is for fixing notion
 ; SendInput {Enter} 
 return 
+
+
 
 ; Alt + Right/Left moves the cursor to beginning and end of line
 !Right::
@@ -72,5 +80,6 @@ return
 ; Productivity
 :::cd::cd Documents/Development/
 :::cdb::cd Documents/Development/blog
+:::cda::cd Documents/Development/tools/ahk
 ::``co::code .
 ::``exp::explorer .
