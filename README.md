@@ -1,6 +1,6 @@
 # Main AHK
 
-This script is my personal AHK script that I use day-to-day to increase productivity. Its used to mainly for:
+Day-to-day AHK Script. Primary uses are:
 
 - Text expansion
 - Fixing common typos
