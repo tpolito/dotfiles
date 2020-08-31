@@ -43,17 +43,6 @@ SendInput ^v
 return 
 
 
-
-; Alt + Right/Left moves the cursor to beginning and end of line
-; TODO: Figure out a more elegant or less intrusive way to do this.
-;!Right::
-;SendInput {End}
-;return
-
-;!Left::
-;SendInput {Home}
-;return
-
 ; Text Expansion
 ; Typos
 ::nad::and
