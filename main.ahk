@@ -7,7 +7,7 @@ SendInput %CurrentDateTime%
 return
 
 ; Opens Dev Tools in Chrome
-!a::
+^!g::
 SendInput {F12}
 return
 
@@ -45,13 +45,14 @@ return
 
 
 ; Alt + Right/Left moves the cursor to beginning and end of line
-!Right::
-SendInput {End}
-return
+; TODO: Figure out a more elegant or less intrusive way to do this.
+;!Right::
+;SendInput {End}
+;return
 
-!Left::
-SendInput {Home}
-return
+;!Left::
+;SendInput {Home}
+;return
 
 ; Text Expansion
 ; Typos
@@ -63,6 +64,7 @@ return
 ::ahve::have
 ::cosnt::const
 ::ahd::had
+::cahce::cache
 ; Can't Spell
 ::``misc::miscellaneous
 ::``Misc::Miscellaneous
