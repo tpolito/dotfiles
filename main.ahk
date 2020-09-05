@@ -16,9 +16,14 @@ return
 Run, notepad++.exe, C:\Program Files\Notepad++
 return
 
-; Open TODO folder on GDrive
+; Open TODO File folder on GDrive
 !t::
-Run, "C:\Program Files\Microsoft VS Code\Code.exe" "G:\My Drive\Documents\todo"
+Run, "C:\Program Files\Microsoft VS Code\Code.exe" "G:\My Drive\Documents\todo\TODO\TODO.todo"
+return
+
+; Open TODO File folder on GDrive
+!m::
+Run, "C:\Program Files\Microsoft VS Code\Code.exe" "G:\My Drive\Documents\todo\TODO\work.todo" 
 return
 
 ; Open scratchpad.md file on GDrive
@@ -74,3 +79,4 @@ return
 :::cda::cd Documents/Development/tools/ahk
 ::``co::code .
 ::``exp::explorer .
+::``imp::import {} from ''
