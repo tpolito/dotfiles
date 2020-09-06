@@ -68,12 +68,13 @@ return
 ::``li::license
 ::``lis::licenses
 ::``appr::appreciate
+; Productivity
 ::``js::javascript
 ::``Js::Javascript
 ::``ts::typescript
 ::``Ts::Typescript
 ::``gql::GraphQL
-; Productivity
+::`clj::Clojure
 :::cd::cd Documents/Development/
 :::cdb::cd Documents/Development/blog
 :::cda::cd Documents/Development/tools/ahk
