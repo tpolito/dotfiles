@@ -1,34 +1,13 @@
 ; Main AHK
-
 ; Current Date/Time Script
 !q::
 FormatTime, CurrentDateTime,, yyyy/M/d
 SendInput %CurrentDateTime%
 return
 
-; Opens Dev Tools in Chrome
-^!g::
-SendInput {F12}
-return
-
 ; Open Notepad++
 !n::
 Run, notepad++.exe, C:\Program Files\Notepad++
-return
-
-; Open TODO File folder on GDrive
-!t::
-Run, "C:\Program Files\Microsoft VS Code\Code.exe" "G:\My Drive\Documents\todo\TODO\TODO.todo"
-return
-
-; Open TODO File folder on GDrive
-!m::
-Run, "C:\Program Files\Microsoft VS Code\Code.exe" "G:\My Drive\Documents\todo\TODO\work.todo" 
-return
-
-; Open scratchpad.md file on GDrive
-!y::
-Run, "C:\Program Files\Microsoft VS Code\Code.exe" "G:\My Drive\Documents\todo\scratchpad.md"
 return
 
 ; Notion TODO - add a ' ; ' the first line to disable
@@ -45,8 +24,11 @@ SendInput ^k
 SendInput ^v 
 ; This is for fixing notion
 ; SendInput {Enter} 
-return 
+return
 
+; Discord Remaps
+PrintScreen::F13
+Pause::F14
 
 ; Text Expansion
 ; Typos
@@ -59,6 +41,7 @@ return
 ::cosnt::const
 ::ahd::had
 ::cahce::cache
+::thrid::third
 ; Can't Spell
 ::``misc::miscellaneous
 ::``Misc::Miscellaneous
@@ -69,15 +52,21 @@ return
 ::``lis::licenses
 ::``appr::appreciate
 ; Productivity
-::``js::javascript
-::``Js::Javascript
-::``ts::typescript
-::``Ts::Typescript
 ::``gql::GraphQL
-::`clj::Clojure
+::``clj::Clojure
 :::cd::cd Documents/Development/
 :::cdb::cd Documents/Development/blog
 :::cda::cd Documents/Development/tools/ahk
 ::``co::code .
 ::``exp::explorer .
-::``imp::import {} from ''
+::``dev::yarn dev
+; DnD Avrae Bot
+::``ch::-check
+::``chp::-check perception
+::``chs::-check stealth
+::``chi::-check insight
+::``cw::-cast cureWounds -l 1
+::``sf::-cast sacredFlame
+::``sa::-save
+::``lr::-g lr
+::``r::-roll
