@@ -56,17 +56,9 @@ Pause::F14
 ::``clj::Clojure
 :::cd::cd Documents/Development/
 :::cdb::cd Documents/Development/blog
+:::cdd::cd Documents/Development/projects/discordbot
+:::cdnd::cd Documents/Development/projects/dnd-toolkit-2/frontend
 :::cda::cd Documents/Development/tools/ahk
 ::``co::code .
 ::``exp::explorer .
 ::``dev::yarn dev
-; DnD Avrae Bot
-::``ch::-check
-::``chp::-check perception
-::``chs::-check stealth
-::``chi::-check insight
-::``cw::-cast cureWounds -l 1
-::``sf::-cast sacredFlame
-::``sa::-save
-::``lr::-g lr
-::``r::-roll
