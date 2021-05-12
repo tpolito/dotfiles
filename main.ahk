@@ -56,8 +56,9 @@ Pause::F14
 ::``clj::Clojure
 :::cd::cd Documents/Development/
 :::cdb::cd Documents/Development/blog
-:::cdd::cd Documents/Development/projects/discordbot
+:::cdd::cd Documents/Development/projects/discord-bot
 :::cdnd::cd Documents/Development/projects/dnd-toolkit-2/frontend
+:::cdg::cd Documents/Development/game-dev/HideAndSeek
 :::cda::cd Documents/Development/tools/ahk
 ::``co::code .
 ::``exp::explorer .
