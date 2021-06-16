@@ -1,0 +1,12 @@
+path = [...]
+startup = [
+  "alias c = clear",
+  "alias gs = git status",
+  "alias gaa = git add .",
+  "alias gc = git commit -m ",
+  "alias cdd = cd Documents/Development/",
+  "alias cdis = cd Documents/Development/projects/discord-bot",
+  "alias cdnd = cd Documents/Development/projects/dnd-toolkit-2/frontend",
+  "alias cdg = cd Documents/Development/game-dev",
+  "alias exp = explorer ."
+]
