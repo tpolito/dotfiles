@@ -1,12 +1,13 @@
-path = [...]
+path = ["C:\\Program Files (x86)\\Razer Chroma SDK\\bin", "C:\\Program Files\\Razer Chroma SDK\\bin", "C:\\WINDOWS\\system32", "C:\\WINDOWS", "C:\\WINDOWS\\System32\\Wbem", "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\", "C:\\WINDOWS\\System32\\OpenSSH\\", "C:\\WINDOWS\\system32\\config\\systemprofile\\AppData\\Local\\Microsoft\\WindowsApps", "C:\\Program Files (x86)\\Google\\Cloud SDK\\google-cloud-sdk\\bin", "C:\\Program Files\\NVIDIA Corporation\\NVIDIA NvDLISR", "C:\\Program Files\\dotnet\\", "C:\\Program Files\\Microsoft SQL Server\\130\\Tools\\Binn\\", "C:\\Program Files\\Microsoft SQL Server\\Client SDK\\ODBC\\170\\Tools\\Binn\\", "C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common", "C:\\Program Files\\Git\\bin\\", "C:\\Program Files\\Git\\cmd\\", "C:\\Program Files\\Intel\\WiFi\\bin\\", "C:\\Program Files\\Common Files\\Intel\\WirelessCommon\\", "C:\\Program Files (x86)\\SoftKinetic\\DepthSenseSDK\\bin", "C:\\Program Files\\SoftKinetic\\DepthSenseSDK\\bin", "C:\\WINDOWS\\system32", "C:\\WINDOWS", "C:\\WINDOWS\\System32\\Wbem", "C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\", "C:\\WINDOWS\\System32\\OpenSSH\\", "C:\\Users\\Tyler\\AppData\\Local\\Programs\\Python\\Python38-32", "C:\\Program Files\\nodejs\\", "C:\\Program Files (x86)\\Yarn\\bin\\", "C:\\Program Files\\Docker\\Docker\\resources\\bin", "C:\\ProgramData\\DockerDesktop\\version-bin", "C:\\Program Files\\Go\\bin", "C:\\Users\\Tyler\\Desktop\\Godot\\Godot_mono", "C:\\Users\\Tyler\\Desktop\\Godot", "C:\\Program Files\\Cryptowatch Desktop\\", "C:\\Users\\Tyler\\nu\\nushell-0.32.0", "C:\\Users\\Tyler\\.cargo\\bin", "C:\\Users\\Tyler\\scoop\\apps\\yarn\\current\\Yarn\\bin", "C:\\Users\\Tyler\\scoop\\apps\\yarn\\current\\global\\node_modules\\.bin", "C:\\Users\\Tyler\\scoop\\shims", "C:\\Users\\Tyler\\AppData\\Local\\Programs\\Python\\Python38-32\\Scripts\\", "C:\\Users\\Tyler\\AppData\\Local\\Programs\\Python\\Python38-32\\", "C:\\Users\\Tyler\\.windows-build-tools\\python27\\", "C:\\Users\\Tyler\\AppData\\Local\\Programs\\Python\\Python37-32\\Scripts\\", "C:\\Users\\Tyler\\AppData\\Local\\Programs\\Python\\Python37-32\\", "C:\\Users\\Tyler\\AppData\\Local\\Microsoft\\WindowsApps", "C:\\Users\\Tyler\\AppData\\Local\\atom\\bin", "C:\\Program Files\\Microsoft VS Code\\bin", "C:\\Users\\Tyler\\AppData\\Local\\Google\\Cloud SDK\\google-cloud-sdk\\bin", "C:\\Users\\Tyler\\AppData\\Local\\hyper\\app-3.0.1-canary4\\resources\\bin", "C:\\Users\\Tyler\\AppData\\Local\\GitHubDesktop\\bin", "C:\\Users\\Tyler\\AppData\\Local\\Pandoc\\", "C:\\Users\\Tyler\\.deno\\bin", "C:\\Exercism", "C:\\Users\\Tyler\\Documents\\Development\\learning\\exercism\\javascript", "C:\\Users\\Tyler\\AppData\\Roaming\\npm", "C:\\Users\\Tyler\\AppData\\Local\\Programs\\Microsoft VS Code\\bin", "C:\\Program Files (x86)\\GitHub CLI\\", "C:\\Users\\Tyler\\AppData\\Local\\Yarn\\bin", "C:\\Users\\Tyler\\AppData\\Local\\MaxTo\\", "C:\\Users\\Tyler\\go\\bin", "C:\\Users\\Tyler\\.dotnet\\tools", "C:\\Program Files\\Onivim2"]
 startup = [
   "alias c = clear",
   "alias gs = git status",
   "alias gaa = git add .",
   "alias gc = git commit -m ",
-  "alias cdd = cd Documents/Development/",
-  "alias cdis = cd Documents/Development/projects/discord-bot",
-  "alias cdnd = cd Documents/Development/projects/dnd-toolkit-2/frontend",
-  "alias cdg = cd Documents/Development/game-dev",
-  "alias exp = explorer ."
+  "alias cdd = cd C:\Users\Tyler\Workspace",
+  "alias cdis = cd C:\Users\Tyler\Workspace\discord-bot",
+  "alias cdnd = cd C:\Users\Tyler\Workspace\dnd-toolkit-2",
+  "alias cdg = cd C:\Users\Tyler\Workspace\game-dev",
+  "alias exp = explorer .",
+  "alias home = cd ~/"
 ]
