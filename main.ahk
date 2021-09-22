@@ -1,12 +1,12 @@
 ; Main AHK
 ; Current Date/Time Script
-!q::
+^!q::
 FormatTime, CurrentDateTime,, yyyy/M/d
 SendInput %CurrentDateTime%
 return
 
 ; Open Notepad++
-!n::
+^!n::
 Run, notepad++.exe, C:\Program Files\Notepad++
 return
 
@@ -20,22 +20,17 @@ return
 #c::
 WinExist("A")
 WinGetPos,,, sizeX, sizeY
-WinMove, (A_ScreenWidth/2)-(sizeX/2), (A_ScreenHeight/2)-(sizeY/2)-14
-return
-
-; Referance Link - From Adam Learns
-::``ref:: 
-SendInput (reference) 
-SendInput {Left}^+{Left} 
-SendInput ^k 
-SendInput ^v 
-; This is for fixing notion
-; SendInput {Enter} 
+WinMove, (A_ScreenWidth/2)-(sizeX/2), (A_ScreenHeight/2)-(sizeY/2)
 return
 
 ; Discord Remaps
 PrintScreen::F13
 Pause::F14
+
+; Mouse 4 & 5 Remaps
+;XButton1::v
+; This is F17 for CrossCode - I can change this later if I want to.
+XButton2::F17
 
 ; Text Expansion
 ; Typos
