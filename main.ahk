@@ -10,12 +10,6 @@ return
 Run, notepad++.exe, C:\Program Files\Notepad++
 return
 
-; Notion TODO - add a ' ; ' the first line to disable
-; CTRL+Enter to create a todo item within notion
-!Enter::
-Send [] 
-return
-
 ; Center Active Window
 #c::
 WinExist("A")
@@ -27,10 +21,44 @@ return
 PrintScreen::F13
 Pause::F14
 
+; Delete Current Line
+!k:: DeleteCurrentLine()
+
+DeleteCurrentLine() {
+  SendInput {End}
+  SendInput +{Home}
+
+  If getSelectedText() = "" {
+    ; We are on a empty line
+    SendInput {Delete}
+  } Else {
+    SendInput ^+{Left}
+    SendInput {Delete}
+  }
+}
+
+getSelectedText() {
+   ; See if selection can be captured without using the clipboard.
+    WinActive("A")
+    ControlGetFocus ctrl
+    ControlGet selectedText, Selected,, %ctrl%
+
+    ;If not, use the clipboard as a fallback.
+    If (selectedText = "") {
+        originalClipboard := ClipboardAll ; Store current clipboard.
+        Clipboard := ""
+        SendInput ^c
+        ClipWait .2
+        selectedText := ClipBoard
+        ClipBoard := originalClipboard
+    }
+
+    Return selectedText
+}
+
 ; Mouse 4 & 5 Remaps
-;XButton1::v
-; This is F17 for CrossCode - I can change this later if I want to.
-XButton2::F17
+;Button1::F17
+;XButton2::F17
 
 ; Text Expansion
 ; Typos
@@ -53,15 +81,3 @@ XButton2::F17
 ::``li::license
 ::``lis::licenses
 ::``appr::appreciate
-; Productivity
-::``gql::GraphQL
-::``clj::Clojure
-:::cd::cd Documents/Development/
-:::cdb::cd Documents/Development/blog
-:::cdd::cd Documents/Development/projects/discord-bot
-:::cdnd::cd Documents/Development/projects/dnd-toolkit-2/frontend
-:::cdg::cd Documents/Development/game-dev/HideAndSeek
-:::cda::cd Documents/Development/tools/ahk
-::``co::code .
-::``exp::explorer .
-::``dev::yarn dev
