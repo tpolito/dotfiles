@@ -21,12 +21,19 @@ return
 PrintScreen::F13
 Pause::F14
 
+; Select Current Line
+!a:: SelectCurrentLine()
+
+SelectCurrentLine() {
+  SendInput {End}
+  SendInput +{Home}
+}
+
 ; Delete Current Line
 !k:: DeleteCurrentLine()
 
 DeleteCurrentLine() {
-  SendInput {End}
-  SendInput +{Home}
+  SelectCurrentLine()
 
   If getSelectedText() = "" {
     ; We are on a empty line
