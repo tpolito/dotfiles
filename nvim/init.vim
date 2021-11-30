@@ -1,37 +1,56 @@
-call plug#begin('C:/Users/Tyler/AppData/Local/nvim/plugged')
-
-" Configuration 
-set number " Line numbers
-let mapleader = "'" " Command key to .
-syntax on " Turn on sytax highlighting
-set ignorecase " Case insensitive search
-set noswapfile " disable swap file
+" Config
+set number " Enable line numbers
+set noswapfile " Disable swap files
 set incsearch
+set ignorecase " Enable case insensitive search
 
-" Plugins
-Plug 'joshdick/onedark.vim'
-Plug 'preservim/nerdtree'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'nvim-telescope/telescope-fzf-native.nvim', { 'do': 'make' }
+let mapleader = "'" " Set command key to single-quote
+
+hi NormalFloat cterm=reverse gui=reverse
+
+call plug#begin('~/AppData/Local/nvim/plugged')
+" icons
+Plug 'ryanoasis/vim-devicons'
+
+" Theme
+Plug 'navarasu/onedark.nvim'
+
+" neovim CoC
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" neovim tree sitter
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/playground'
+
+" telescope
+Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
-Plug 'vim-airline/vim-airline'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'maxmellon/vim-jsx-pretty' " help it with JSX
-call plug#end()
+Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
-" Find files using Telescope command-line sugar.
+" nerdtree
+Plug 'preservim/nerdtree'
+
+" airline
+Plug 'vim-airline/vim-airline'
+
+" vim-jsx-pretty
+" ...
+
+call plug#end()
+colorscheme onedark
+
+" Remaps
+" Telescope
 nnoremap <leader>ff <cmd>Telescope find_files<cr>
-nnoremap <leader>fg <cmd>Telescope live_grep<cr>
-nnoremap <leader>fb <cmd>Telescope buffers<cr>
-nnoremap <leader>fh <cmd>Telescope help_tags<cr>
-" Coc
-nnoremap <leader>gd <Plug>(coc-definition)
-nnoremap <leader>gy <Plug>(coc-type-definition)
-nnoremap <leader>gi <Plug>(coc-implementation)
-nnoremap <leader>gr <Plug>(coc-references)
-" Tree
+
+" Coc (need to use nmap for Coc)
+nmap <leader>gd <Plug>(coc-definition)
+nmap <leader>gy <Plug>(coc-type-definition)
+nmap <leader>gi <Plug>(coc-implementation)
+nmap <leader>gr <Plug>(coc-references)
+
+" Nerdtree
 nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <leader>nt :NERDTree<CR>
-nnoremap <leader>nn :NERDTreeToggle<CR>
-nnoremap <leader>nf :NERDTreeFind<CR>
+nnoremap <C-n> :NERDTree<CR>
+nnoremap <C-m> :NERDTreeToggle<CR>

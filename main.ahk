@@ -1,7 +1,7 @@
 ; Main AHK
 ; Current Date/Time Script
 ^!q::
-FormatTime, CurrentDateTime,, yyyy/M/d
+FormatTime, CurrentDateTime,, yyyy-M-d
 SendInput %CurrentDateTime%
 return
 
@@ -17,6 +17,18 @@ WinGetPos,,, sizeX, sizeY
 WinMove, (A_ScreenWidth/2)-(sizeX/2), (A_ScreenHeight/2)-(sizeY/2)
 return
 
+#!^Left::
+#+z::
+SysGet, m, MonitorWorkArea 
+WinMove, A,, 0, 0, mRight/2, mBottom 
+return
+
+#!^Right::
+#z:: 
+SysGet, m, MonitorWorkArea 
+WinMove, A,, mRight/2, 0, mRight/2, mBottom 
+return
+
 ; Discord Remaps
 PrintScreen::F13
 Pause::F14
@@ -29,8 +41,8 @@ SelectCurrentLine() {
   SendInput +{Home}
 }
 
-; Delete Current Line
-!k:: DeleteCurrentLine()
+; Delete Current Line - This is currently crashing AHK, no idea why
+; !k:: DeleteCurrentLine()
 
 DeleteCurrentLine() {
   SelectCurrentLine()

@@ -1,14 +1,13 @@
 {
   "suggest.noselect": false,
-  "eslint.nodePath": "/home/user/.config/yarn/global/node_modules",
   "coc.preferences.formatOnSaveFiletypes": [
     "javascript",
+    "javascriptreact",
     "typescript",
     "typescriptreact",
+    "typescript.tsx",
     "json",
-    "javascriptreact",
-    "typescipt.tsx",
-    "graphql",
-    "html"
+    "html",
+    "css"
   ]
 }

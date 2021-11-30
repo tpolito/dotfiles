@@ -10,5 +10,5 @@ startup = [
   "alias cdg = cd Workspace/game-dev",
   "alias exp = explorer",
   "alias home = cd ~/",
-  "alias n = nvim"
+  "alias n = neovide"
 ]
