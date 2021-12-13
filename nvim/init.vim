@@ -1,56 +1,61 @@
-" Config
-set number " Enable line numbers
-set noswapfile " Disable swap files
-set incsearch
-set ignorecase " Enable case insensitive search
+" base settings
+syntax on
+set number
+set noswapfile
+set relativenumber
+set ignorecase
+set nocompatible
+set shiftwidth=4
+set expandtab
+set scrolloff=8
+set updatetime=300
+set tabstop=4
+set smartindent
+set autoindent
+set clipboard+=unnamedplus
 
-let mapleader = "'" " Set command key to single-quote
-
-hi NormalFloat cterm=reverse gui=reverse
+let mapleader = "'"
 
 call plug#begin('~/AppData/Local/nvim/plugged')
-" icons
-Plug 'ryanoasis/vim-devicons'
+    " Theme + Bar
+    Plug 'navarasu/onedark.nvim'
+    Plug 'vim-airline/vim-airline'
+    
+    " LSP
+    Plug 'neovim/nvim-lspconfig'
+    Plug 'williamboman/nvim-lsp-installer'
+    Plug 'hrsh7th/cmp-nvim-lsp'
+    Plug 'hrsh7th/cmp-buffer'
+    Plug 'hrsh7th/cmp-path'
+    Plug 'hrsh7th/cmp-cmdline'
+    Plug 'hrsh7th/nvim-cmp'
+    Plug 'L3MON4D3/LuaSnip' " A snip engine is required to use completion engine
+    Plug 'saadparwaiz1/cmp_luasnip'
+ 
+    " Plug 'tzachar/cmp-tabnine', { 'do': './install.sh'} " Linux & mac
+    Plug 'tzachar/cmp-tabnine', { 'do': 'powershell ./install.ps1' } " Windows
 
-" Theme
-Plug 'navarasu/onedark.nvim'
+    Plug 'windwp/nvim-autopairs'
 
-" neovim CoC
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-
-" neovim tree sitter
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/playground'
-
-" telescope
-Plug 'nvim-lua/popup.nvim'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'nvim-telescope/telescope.nvim'
-Plug 'nvim-telescope/telescope-fzy-native.nvim'
-
-" nerdtree
-Plug 'preservim/nerdtree'
-
-" airline
-Plug 'vim-airline/vim-airline'
-
-" vim-jsx-pretty
-" ...
+    " Treesitter
+    Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+    Plug 'nvim-treesitter/nvim-treesitter-textobjects'
+    
+    " Telescope
+    Plug 'nvim-lua/popup.nvim'
+    Plug 'nvim-lua/plenary.nvim'
+    Plug 'nvim-telescope/telescope.nvim'
+    Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
 call plug#end()
+
 colorscheme onedark
 
-" Remaps
-" Telescope
-nnoremap <leader>ff <cmd>Telescope find_files<cr>
+" Telescope Remaps
+nnoremap <Leader>f <cmd>lua require'telescope.builtin'.find_files{}<CR>
+nnoremap <Leader>F <cmd>lua require'telescope.builtin'.oldfiles{}<CR>
 
-" Coc (need to use nmap for Coc)
-nmap <leader>gd <Plug>(coc-definition)
-nmap <leader>gy <Plug>(coc-type-definition)
-nmap <leader>gi <Plug>(coc-implementation)
-nmap <leader>gr <Plug>(coc-references)
-
-" Nerdtree
-nnoremap <leader>n :NERDTreeFocus<CR>
-nnoremap <C-n> :NERDTree<CR>
-nnoremap <C-m> :NERDTreeToggle<CR>
+lua << EOF
+require('lsp')
+require('nvim-autopairs').setup{}
+EOF
