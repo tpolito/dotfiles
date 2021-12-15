@@ -34,8 +34,11 @@ call plug#begin('~/AppData/Local/nvim/plugged')
  
     " Plug 'tzachar/cmp-tabnine', { 'do': './install.sh'} " Linux & mac
     Plug 'tzachar/cmp-tabnine', { 'do': 'powershell ./install.ps1' } " Windows
-
     Plug 'windwp/nvim-autopairs'
+    Plug 'habamax/vim-godot'
+
+    " File Explorer
+    Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
 
     " Treesitter
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}

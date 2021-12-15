@@ -41,11 +41,10 @@ local on_attach = function(client, bufnr)
 end
 
 lsp_installer.on_server_ready(function (server)
-    local opts = {
-        on_attach = on_attach,
-        capabilities = capabilities
-    }
-    
+    local opts = {}
+    -- defaults
+    opts.capabilities = capabilities
+    opts.on_attach = on_attach
     -- This setup function is the same as lspconfig's
     server:setup(opts)
 end)
