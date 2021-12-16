@@ -38,8 +38,7 @@ call plug#begin('~/AppData/Local/nvim/plugged')
     Plug 'habamax/vim-godot'
 
     " File Explorer
-    Plug 'Shougo/defx.nvim', { 'do': ':UpdateRemotePlugins' }
-
+    Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'} 
     " Treesitter
     Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
     Plug 'nvim-treesitter/nvim-treesitter-textobjects'
@@ -49,6 +48,11 @@ call plug#begin('~/AppData/Local/nvim/plugged')
     Plug 'nvim-lua/plenary.nvim'
     Plug 'nvim-telescope/telescope.nvim'
     Plug 'nvim-telescope/telescope-fzy-native.nvim'
+    
+
+    " JSX Pretty
+    Plug 'yuezk/vim-js'
+    Plug 'maxmellon/vim-jsx-pretty'
 
 call plug#end()
 
@@ -57,6 +61,10 @@ colorscheme onedark
 " Telescope Remaps
 nnoremap <Leader>f <cmd>lua require'telescope.builtin'.find_files{}<CR>
 nnoremap <Leader>F <cmd>lua require'telescope.builtin'.oldfiles{}<CR>
+
+" Chadtree Remaps
+nnoremap <Leader>v <cmd>CHADopen<cr>
+nnoremap <Leader>V <cmd>CHADopen --always-focus<cr>
 
 lua << EOF
 require('lsp')
