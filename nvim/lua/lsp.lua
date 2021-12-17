@@ -1,4 +1,3 @@
-local lsp_installer = require("nvim-lsp-installer")
 local cmp = require('cmp')
 local lspconfig = require('lspconfig')
 local tabnine = require('cmp_tabnine.config')
@@ -33,18 +32,33 @@ cmp.setup({
 
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
-local on_attach = function(client, bufnr) 
+local on_attach = function(client, bufnr)
     -- Format on save
     if client.resolved_capabilities.document_formatting then 
         vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
     end
 end
 
-lsp_installer.on_server_ready(function (server)
-    local opts = {}
-    -- defaults
-    opts.capabilities = capabilities
-    opts.on_attach = on_attach
-    -- This setup function is the same as lspconfig's
-    server:setup(opts)
-end)
+local servers = { 'tsserver', 'gdscript' }
+
+for _, lsp in ipairs(servers) do
+    -- This is hack needed for windows
+    if lsp == 'gdscript' then 
+        lspconfig[lsp].setup{
+            cmd = { [[C:\Users\Tyler\ncat\ncat.exe]], "localhost", "6008" },
+            capabilities = capabilities,
+            on_attach = on_attach,
+            flags = {
+                debounce_text_changes = 150,
+            },
+        }
+    else
+        lspconfig[lsp].setup{
+            capabilities = capabilities,
+            on_attach = on_attach,
+            flags = {
+                debounce_text_changes = 150,
+            },
+        }
+    end
+end

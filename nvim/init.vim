@@ -1,4 +1,4 @@
-" base settings
+ " base settings
 syntax on
 set number
 set noswapfile
@@ -23,7 +23,7 @@ call plug#begin('~/AppData/Local/nvim/plugged')
     
     " LSP
     Plug 'neovim/nvim-lspconfig'
-    Plug 'williamboman/nvim-lsp-installer'
+    " Plug 'williamboman/nvim-lsp-installer'
     Plug 'hrsh7th/cmp-nvim-lsp'
     Plug 'hrsh7th/cmp-buffer'
     Plug 'hrsh7th/cmp-path'
