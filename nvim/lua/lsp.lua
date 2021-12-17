@@ -33,10 +33,19 @@ cmp.setup({
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 local on_attach = function(client, bufnr)
+    local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
     -- Format on save
     if client.resolved_capabilities.document_formatting then 
         vim.cmd("autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()")
     end
+    
+    local ops = { noremap=true, silent=true }
+
+    buf_set_keymap('n', 'gd', '<cmd>lua vim.lsp.buf.definition()<CR>', ops)
+    buf_set_keymap('n', 'K', '<cmd>lua vim.lsp.buf.hover()<CR>', ops)
+    buf_set_keymap('n', 'gi', '<cmd>lua vim.lsp.buf.implementation()<CR>', ops)
+    buf_set_keymap('n', 'gr', '<cmd>lua vim.lsp.buf.references()<CR>', ops)
+    buf_set_keymap('n', '<space>r', '<cmd>lua vim.lsp.buf.rename()<CR>', ops)
 end
 
 local servers = { 'tsserver', 'gdscript' }
