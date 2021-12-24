@@ -1,6 +1,12 @@
 local cmp = require('cmp')
 local lspconfig = require('lspconfig')
 local tabnine = require('cmp_tabnine.config')
+local luasnip = require('luasnip')
+
+local has_words_before = function()
+  local line, col = unpack(vim.api.nvim_win_get_cursor(0))
+  return col ~= 0 and vim.api.nvim_buf_get_lines(0, line - 1, line, true)[1]:sub(col, col):match("%s") == nil
+end
 
 tabnine:setup({
     max_lines = 1000;
@@ -14,11 +20,34 @@ tabnine:setup({
 cmp.setup({
     snippet = {
         expand = function(args) 
-            require('luasnip').lsp_expand(args.body)
+            luasnip.lsp_expand(args.body)
         end,
     },
     mapping = {
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
+        ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
+        ['<C-u>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
+        ['<Tab>'] = cmp.mapping(function(fallback)
+            if cmp.visible() then 
+                cmp.select_next_item()
+            elseif luasnip.expand_or_jumpable() then 
+                luasnip.expand_or_jump()
+            elseif has_words_before() then
+                cmp.complete()
+            else 
+                fallback()
+            end
+        end, { 'i', 's' }),
+        ['<S-Tab>'] = cmp.mapping(function(fallback)
+            if cmp.visible() then
+                cmp.select_prev_item()
+            elseif luasnip.jumpable(-1) then 
+                luasnip.jump(-1)
+            else
+                fallback()
+            end
+        end, { 'i', 's' }),
+
     },
     sources = cmp.config.sources({
     -- Provides sources for the auto-complete window
@@ -48,26 +77,19 @@ local on_attach = function(client, bufnr)
     buf_set_keymap('n', '<space>r', '<cmd>lua vim.lsp.buf.rename()<CR>', ops)
 end
 
-local servers = { 'tsserver', 'gdscript' }
+--local servers = { 'tsserver', 'gdscript', 'nimls' }
 
-for _, lsp in ipairs(servers) do
-    -- This is hack needed for windows
-    if lsp == 'gdscript' then 
-        lspconfig[lsp].setup{
-            cmd = { [[C:\Users\Tyler\ncat\ncat.exe]], "localhost", "6008" },
-            capabilities = capabilities,
-            on_attach = on_attach,
-            flags = {
-                debounce_text_changes = 150,
-            },
+local function config(_config) 
+    return vim.tbl_deep_extend("force", {
+        capabilities = capabilities,
+        on_attach = on_attach,
+        flags = {
+            debounce_text_changes = 150,
         }
-    else
-        lspconfig[lsp].setup{
-            capabilities = capabilities,
-            on_attach = on_attach,
-            flags = {
-                debounce_text_changes = 150,
-            },
-        }
-    end
+    }, _config or {})
 end
+
+require("lspconfig").tsserver.setup(config())
+require("lspconfig").gdscript.setup(config())
+require("lspconfig").nimls.setup(config())
+
