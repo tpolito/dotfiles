@@ -27,6 +27,7 @@ cmp.setup({
         ['<CR>'] = cmp.mapping.confirm({ select = true }),
         ['<C-b>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), { 'i', 'c' }),
         ['<C-u>'] = cmp.mapping(cmp.mapping.scroll_docs(4), { 'i', 'c' }),
+        ['<C-e>'] = cmp.mapping.close(),
         ['<Tab>'] = cmp.mapping(function(fallback)
             if cmp.visible() then 
                 cmp.select_next_item()
@@ -91,5 +92,4 @@ end
 
 require("lspconfig").tsserver.setup(config())
 require("lspconfig").gdscript.setup(config())
-require("lspconfig").nimls.setup(config())
-
+require("lspconfig").nimls.setup(config()

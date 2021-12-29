@@ -35,6 +35,7 @@ call plug#begin('~/.config/nvim/plugged')
     Plug 'tzachar/cmp-tabnine', { 'do': './install.sh'} " Linux & mac
     " Plug 'tzachar/cmp-tabnine', { 'do': 'powershell ./install.ps1' } " Windows
     Plug 'windwp/nvim-autopairs'
+    Plug 'habamax/vim-godot'
 
     " File Explorer
     Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'} 
@@ -52,8 +53,7 @@ call plug#begin('~/.config/nvim/plugged')
     " JSX Pretty
     Plug 'yuezk/vim-js'
     Plug 'maxmellon/vim-jsx-pretty'
-    " gdscript 
-    Plug 'habamax/vim-godot'
+
     " nim
     Plug 'zah/nim.vim'
 
