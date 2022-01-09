@@ -53,7 +53,9 @@ call plug#begin('~/.config/nvim/plugged')
     " JSX Pretty
     Plug 'yuezk/vim-js'
     Plug 'maxmellon/vim-jsx-pretty'
-
+   
+    " svelte
+    Plug 'evanleck/vim-svelte', {'branch': 'main'}
     " nim
     Plug 'zah/nim.vim'
 

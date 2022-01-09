@@ -4,11 +4,10 @@ startup = [
   "alias gs = git status",
   "alias gaa = git add .",
   "alias gc = git commit -m ",
-  "alias cdd = cd Workspace/",
-  "alias cdis = cd Documents/Development/projects/discord-bot",
-  "alias cdnd = cd Workspace/dnd-toolkit-2",
-  "alias cdg = cd Workspace/game-dev",
   "alias exp = explorer",
   "alias home = cd ~/",
-  "alias n = neovide"
+  "alias learn = cd ~/Learningspace",
+  "alias work = cd ~/Workspace",
+  "alias n = neovide",
+  "alias lg = lazygit"
 ]

@@ -30,8 +30,11 @@ WinMove, A,, mRight/2, 0, mRight/2, mBottom
 return
 
 ; Discord Remaps
+; F13 - Mute / F14 - Mute & Deafen
 PrintScreen::F13
 Pause::F14
+NumpadHome::F13
+NumpadUp::F14
 
 ; Select Current Line
 !a:: SelectCurrentLine()
