@@ -10,7 +10,6 @@
   "editor.fontFamily": "JetBrains Mono",
   "editor.fontLigatures": true,
   "editor.wordWrap": "on",
-  "editor.fontSize": 16,
   "editor.suggestSelection": "first",
   "editor.bracketPairColorization.enabled": true,
   "workbench.colorCustomizations": {
@@ -22,14 +21,10 @@
     "editorBracketHighlight.foreground5": "#da70d6",
     "editorBracketHighlight.foreground6": "#87ceeb",
   },
-  "terminal.integrated.fontSize": 16,
   "workbench.colorTheme": "One Dark Pro",
-  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
   "workbench.iconTheme": "material-icon-theme",
-  "liveServer.settings.donotShowInfoMsg": true,
   "gitlens.gitCommands.skipConfirmations": [
     "fetch:command",
-    "stash-push:command",
     "switch:command",
     "branch-create:command"
   ],
@@ -41,18 +36,10 @@
     "javascript": "javascriptreact"
   },
   "eslint.validate": [
-    {
-      "language": "javascript"
-    },
-    {
-      "language": "javascriptreact"
-    },
-    {
-      "language": "typescript"
-    },
-    {
-      "language": "typescriptreact"
-    }
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact"
   ],
   "prettier.singleQuote": true,
   "[javascript]": {
@@ -70,5 +57,14 @@
   "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
-  "editor.accessibilitySupport": "off"
+  "[svelte]": {
+    "editor.defaultFormatter": "svelte.svelte-vscode"
+  },
+  "editor.accessibilitySupport": "off",
+  "git.confirmSync": false,
+  "svelte.enable-ts-plugin": true,
+  // Vim
+  "vim.leader": "'",
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": false,
 }

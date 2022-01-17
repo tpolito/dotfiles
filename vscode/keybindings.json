@@ -17,18 +17,28 @@
     "key": "alt+left",
     "command": "workbench.action.previousEditor"
   },
-  // Definitions
   {
-    "key": "ctrl+alt+i",
-    "command": "editor.action.revealDefinition",
-    "when": "editorHasDefinitionProvider && editorTextFocus && !isInEmbeddedEditor"
+    "key": "tab",
+    "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
   {
-    "key": "ctrl+i",
-    "command": "editor.action.peekDefinition",
-    "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
-  },
+    "key": "shift+tab",
+    "command": "selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  }, 
   // ***Removes default keybinds***
+  // Remove up and down arrow from selecting dropdown
+  {
+    "key": "down",
+    "command": "-selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  }, 
+  {
+    "key": "up",
+    "command": "-selectPrevSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
   {
     "key": "escape",
     "command": "-welcome.goBack",
@@ -66,5 +76,15 @@
     "key": "alt+f12",
     "command": "-editor.action.peekDefinition",
     "when": "editorHasDefinitionProvider && editorTextFocus && !inReferenceSearchEditor && !isInEmbeddedEditor"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-list.focusPageDown",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+d",
+    "command": "-extension.vim_ctrl+d",
+    "when": "editorTextFocus && vim.active && vim.use<C-d> && !inDebugRepl"
   },
 ]
