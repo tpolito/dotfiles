@@ -3,14 +3,22 @@
     "actions": 
     [
         {
+            "command": "openTabRenamer"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "up"
+            },
+            "keys": "ctrl+j"
+        },
+        {
             "command": 
             {
                 "action": "newTab"
             },
             "keys": "ctrl+n"
-        },
-        {
-            "command": "openTabRenamer"
         },
         {
             "command": 
@@ -22,27 +30,27 @@
         {
             "command": 
             {
-                "action": "nextTab"
-            },
-            "keys": "alt+right"
-        },
-        {
-            "command": 
-            {
                 "action": "setTabColor"
             }
         },
         {
             "command": 
             {
-                "action": "splitPane"
-            }
+                "action": "nextTab"
+            },
+            "keys": "alt+l"
         },
         {
             "command": 
             {
                 "action": "moveFocus",
                 "direction": "right"
+            }
+        },
+        {
+            "command": 
+            {
+                "action": "splitPane"
             }
         },
         {
@@ -60,7 +68,15 @@
             {
                 "action": "prevTab"
             },
-            "keys": "alt+left"
+            "keys": "alt+h"
+        },
+        {
+            "command": 
+            {
+                "action": "moveFocus",
+                "direction": "down"
+            },
+            "keys": "ctrl+k"
         },
         {
             "command": "unbound",
@@ -108,15 +124,7 @@
         },
         {
             "command": "unbound",
-            "keys": "alt+down"
-        },
-        {
-            "command": "unbound",
             "keys": "ctrl+alt+left"
-        },
-        {
-            "command": "unbound",
-            "keys": "alt+up"
         },
         {
             "command": "unbound",
@@ -268,10 +276,6 @@
         },
         {
             "command": "unbound",
-            "keys": "ctrl+shift+p"
-        },
-        {
-            "command": "unbound",
             "keys": "win+sc(41)"
         },
         {
@@ -313,14 +317,46 @@
         {
             "command": "unbound",
             "keys": "alt+n"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+right"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+left"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+down"
+        },
+        {
+            "command": "unbound",
+            "keys": "alt+up"
+        },
+        {
+            "command": 
+            {
+                "action": "commandPalette"
+            },
+            "keys": "ctrl+shift+p"
+        },
+        {
+            "command": "closePane",
+            "keys": "alt+w"
         }
     ],
     "defaultProfile": "{2b372ca1-1ee2-403d-a839-6d63077ad871}",
+    "experimental.rendering.software": false,
     "profiles": 
     {
         "defaults": 
         {
-            "colorScheme": "One Dark - Custom"
+            "colorScheme": "One Dark - Custom",
+            "font": 
+            {
+                "face": "JetBrains Mono NL"
+            }
         },
         "list": 
         [
@@ -349,8 +385,34 @@
                 "useAcrylic": true
             },
             {
+                "acrylicOpacity": 0.75,
+                "closeOnExit": "graceful",
+                "colorScheme": "One Dark - Custom",
+                "commandline": "wsl.exe -d Ubuntu",
+                "cursorColor": "#FFFFFF",
+                "cursorShape": "bar",
+                "font": 
+                {
+                    "face": "Consolas",
+                    "size": 12
+                },
+                "guid": "{6f303185-d104-4c8c-a3d3-c6a6c3a4b23d}",
+                "historySize": 9001,
+                "icon": "C:/Dev/ubuntuicon.png",
+                "name": "Ubuntu",
+                "padding": "0, 0, 0, 0",
+                "snapOnInput": true,
+                "startingDirectory": "%USERPROFILE%",
+                "useAcrylic": true
+            },
+            {
                 "colorScheme": "One Dark - Custom",
                 "commandline": "nu.exe",
+                "font": 
+                {
+                    "face": "JetBrains Mono NL",
+                    "size": 10
+                },
                 "guid": "{2b372ca1-1ee2-403d-a839-6d63077ad871}",
                 "hidden": false,
                 "name": "Nu Shell",
@@ -358,12 +420,10 @@
                 "tabTitle": "nu"
             },
             {
-                "colorScheme": "Campbell",
-                "experimental.retroTerminalEffect": false,
-                "guid": "{2c4de342-38b7-51cf-b940-2309a097f518}",
+                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
                 "hidden": false,
-                "name": "Ubuntu",
-                "source": "Windows.Terminal.Wsl"
+                "name": "Azure Cloud Shell",
+                "source": "Windows.Terminal.Azure"
             },
             {
                 "commandline": "powershell.exe",
@@ -378,17 +438,22 @@
                 "name": "cmd"
             },
             {
-                "guid": "{b453ae62-4e3d-5e58-b989-0a998ec441b8}",
-                "hidden": false,
-                "name": "Azure Cloud Shell",
-                "source": "Windows.Terminal.Azure"
-            },
-            {
                 "commandline": "C:\\Users\\Tyler\\micro-2.0.10\\micro.exe",
                 "guid": "{46b8ce6c-fa42-4f64-b42f-003a92e2602e}",
                 "name": "micro",
                 "startingDirectory": "%USERPROFILE%",
                 "tabTitle": "micro"
+            },
+            {
+                "commandline": "C:\\Users\\Tyler\\helix\\hx.exe",
+                "guid": "{a91c9357-59e7-4e8a-96c4-6b41d4ddc951}",
+                "name": "helix"
+            },
+            {
+                "guid": "{07b52e3e-de2c-5db4-bd2d-ba144ed6c273}",
+                "hidden": false,
+                "name": "Ubuntu-20.04",
+                "source": "Windows.Terminal.Wsl"
             }
         ]
     },
