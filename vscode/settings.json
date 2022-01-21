@@ -1,7 +1,7 @@
 {
   "terminal.integrated.profiles.windows": {
     "Nu Shell": {
-      "path": "C:\\Users\\Tyler\\nu\\nushell-0.32.0\\nu.exe"
+      "path": "C:\\Users\\Tyler\\nu\\nushell-0.32.0\\nu.exe",
     }
   },
   "terminal.integrated.fontFamily": "monospace",
@@ -19,7 +19,7 @@
     "editorBracketHighlight.foreground3": "#87ceeb",
     "editorBracketHighlight.foreground4": "#ffd700",
     "editorBracketHighlight.foreground5": "#da70d6",
-    "editorBracketHighlight.foreground6": "#87ceeb"
+    "editorBracketHighlight.foreground6": "#87ceeb",
   },
   "workbench.colorTheme": "One Dark Pro",
   "workbench.iconTheme": "material-icon-theme",
@@ -66,5 +66,19 @@
   // Vim
   "vim.leader": "'",
   "vim.useSystemClipboard": true,
-  "vim.useCtrlKeys": false
+  "vim.useCtrlKeys": false,
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<leader>", "v"],
+      "commands": ["workbench.action.toggleSidebarVisibility"]
+    },
+    {
+      "before": ["<leader>", "V"],
+      "commands": ["revealInExplorer"]
+    },
+    {
+      "before": ["<leader>", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    }
+  ]
 }
