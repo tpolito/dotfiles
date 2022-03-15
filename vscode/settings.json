@@ -1,7 +1,7 @@
 {
   "terminal.integrated.profiles.windows": {
     "Nu Shell": {
-      "path": "C:\\Users\\Tyler\\nu\\nushell-0.32.0\\nu.exe",
+      "path": "C:\\Users\\Tyler\\nu\\nushell-0.32.0\\nu.exe"
     }
   },
   "terminal.integrated.fontFamily": "monospace",
@@ -11,6 +11,7 @@
   "editor.fontLigatures": true,
   "editor.wordWrap": "on",
   "editor.suggestSelection": "first",
+  // Bracker Pair Colorizer
   "editor.bracketPairColorization.enabled": true,
   "workbench.colorCustomizations": {
     "editorBracketHighlight.unexpectedBracket.foreground": "#da7070",
@@ -19,7 +20,7 @@
     "editorBracketHighlight.foreground3": "#87ceeb",
     "editorBracketHighlight.foreground4": "#ffd700",
     "editorBracketHighlight.foreground5": "#da70d6",
-    "editorBracketHighlight.foreground6": "#87ceeb",
+    "editorBracketHighlight.foreground6": "#87ceeb"
   },
   "workbench.colorTheme": "One Dark Pro",
   "workbench.iconTheme": "material-icon-theme",
@@ -60,9 +61,21 @@
   "[svelte]": {
     "editor.defaultFormatter": "svelte.svelte-vscode"
   },
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "editor.accessibilitySupport": "off",
   "git.confirmSync": false,
   "svelte.enable-ts-plugin": true,
+  // Github Copilot
+  "editor.inlineSuggest.enabled": true,
+  "github.copilot.enable": {
+    "*": true,
+    "gdscript": false
+  },
   // Vim
   "vim.leader": "'",
   "vim.useSystemClipboard": true,
@@ -79,6 +92,12 @@
     {
       "before": ["<leader>", "f"],
       "commands": ["workbench.action.quickOpen"]
+    },
+    {
+      "before": ["<leader>", "t"],
+      "commands": ["workbench.action.terminal.toggleTerminal"]
     }
-  ]
+  ],
+  "editor.cursorBlinking": "phase",
+  "editor.cursorSmoothCaretAnimation": true
 }
