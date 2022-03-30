@@ -44,21 +44,6 @@ SelectCurrentLine() {
   SendInput +{Home}
 }
 
-; Delete Current Line - This is currently crashing AHK, no idea why
-; !k:: DeleteCurrentLine()
-
-DeleteCurrentLine() {
-  SelectCurrentLine()
-
-  If getSelectedText() = "" {
-    ; We are on a empty line
-    SendInput {Delete}
-  } Else {
-    SendInput ^+{Left}
-    SendInput {Delete}
-  }
-}
-
 getSelectedText() {
    ; See if selection can be captured without using the clipboard.
     WinActive("A")
@@ -77,29 +62,3 @@ getSelectedText() {
 
     Return selectedText
 }
-
-; Mouse 4 & 5 Remaps
-;Button1::F17
-;XButton2::F17
-
-; Text Expansion
-; Typos
-::nad::and
-::hte::the
-::ti::it
-::fo::of
-::fro::for
-::ahve::have
-::cosnt::const
-::ahd::had
-::cahce::cache
-::thrid::third
-; Can't Spell
-::``misc::miscellaneous
-::``Misc::Miscellaneous
-::``res::restaurant
-::``uf::unfortunately
-::``gu::guaranteed
-::``li::license
-::``lis::licenses
-::``appr::appreciate
