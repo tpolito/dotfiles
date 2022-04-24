@@ -6,7 +6,7 @@
 SendMode Input
 
 ;                  vvvvv Enter your Scope modifier percentage here
-ScopeMultiplier := -0.44
+ScopeMultiplier := -0.50
 ;                  ^^^^^
 ; Examples:
 ; -50% ==> -0.50

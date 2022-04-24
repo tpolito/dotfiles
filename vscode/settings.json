@@ -14,6 +14,8 @@
   // Bracker Pair Colorizer
   "editor.bracketPairColorization.enabled": true,
   "workbench.colorCustomizations": {
+    "editor.background": "#000",
+    "editorGutter.background": "#000",
     "editorBracketHighlight.unexpectedBracket.foreground": "#da7070",
     "editorBracketHighlight.foreground1": "#ffd700",
     "editorBracketHighlight.foreground2": "#da70d6",
@@ -22,7 +24,7 @@
     "editorBracketHighlight.foreground5": "#da70d6",
     "editorBracketHighlight.foreground6": "#87ceeb"
   },
-  "workbench.colorTheme": "One Dark Pro",
+  "workbench.colorTheme": "One Dark Pro Flat",
   "workbench.iconTheme": "material-icon-theme",
   "gitlens.gitCommands.skipConfirmations": [
     "fetch:command",
@@ -30,8 +32,6 @@
     "branch-create:command"
   ],
   "csharp.referencesCodeLens.enabled": false,
-  // Formating/Linting/Auto-complete Settings
-  "editor.formatOnSave": true,
   "editor.formatOnPaste": false,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
@@ -99,5 +99,8 @@
     }
   ],
   "editor.cursorBlinking": "phase",
-  "editor.cursorSmoothCaretAnimation": true
+  "editor.cursorSmoothCaretAnimation": true,
+  "editor.formatOnSave": true,
+  "files.autoSave": "afterDelay",
+  "material-icon-theme.folders.theme": "specific"
 }
