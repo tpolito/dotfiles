@@ -1,4 +1,4 @@
-; Main AHK
+ ; Main AHK
 ; Current Date/Time Script
 ^!q::
 FormatTime, CurrentDateTime,, yyyy-M-d
@@ -16,6 +16,16 @@ WinExist("A")
 WinGetPos,,, sizeX, sizeY
 WinMove, (A_ScreenWidth/2)-(sizeX/2), (A_ScreenHeight/2)-(sizeY/2)
 return
+
+; CapsLock -> Ctrl
+$CapsLock::Ctrl
+
+; Rebind for big keyboards
+; (Currently I'm using power toys for this, becasue the ` being the ahk escape character was causing issues)
+; $`::Esc
+
+; +Esc::
+; SendInput, `````
 
 #!^Left::
 #+z::
