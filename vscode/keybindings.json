@@ -2,12 +2,12 @@
   // ***My keybinds***
   // Moving around
   {
-    "key": "alt+l",
+    "key": "shift+l",
     "command": "workbench.action.nextEditor",
     "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
   },
   {
-    "key": "alt+h",
+    "key": "shift+h",
     "command": "workbench.action.previousEditor",
     "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
   },
@@ -32,13 +32,13 @@
     "when": "listFocus && !inputFocus"
   },
   {
-    "key": "ctrl+",
-    "command": "list.focusDown",
-    "when": "editorFocus && vim.mode == 'Visual'"
-  },
-  {
     "key": "tab",
     "command": "selectNextSuggestion",
+    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+  },
+  {
+    "key": "shift+tab",
+    "command": "selectPrevSuggestion",
     "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
   },
   {
@@ -48,8 +48,8 @@
   },
   {
     "key": "shift+tab",
-    "command": "selectPrevSuggestion",
-    "when": "suggestWidgetMultipleSuggestions && suggestWidgetVisible && textInputFocus"
+    "command": "workbench.action.quickOpenNavigatePrevious",
+    "when": "inQUickOpen"
   },
   {
     "key": "alt+t",
@@ -132,5 +132,15 @@
     "key": "ctrl+shift+`",
     "command": "-workbench.action.terminal.new",
     "when": "terminalProcessSupported || terminalWebExtensionContributedProfile"
+  },
+  {
+    "key": "down",
+    "command": "list.scrollDown",
+    "when": "listFocus && !inputFocus"
+  },
+  {
+    "key": "ctrl+down",
+    "command": "-list.scrollDown",
+    "when": "listFocus && !inputFocus"
   }
 ]

@@ -5,6 +5,7 @@
     }
   },
   "terminal.integrated.fontFamily": "monospace",
+  "terminal.integrated.fontSize": 14,
   "terminal.integrated.defaultProfile.windows": "Nu Shell",
   "editor.tabSize": 2,
   "editor.fontFamily": "JetBrains Mono",
@@ -31,7 +32,11 @@
     "switch:command",
     "branch-create:command"
   ],
+  // C#
   "csharp.referencesCodeLens.enabled": false,
+  // "omnisharp.path": "latest",
+  // "omnisharp.useGlobalMono": "always",
+  // Editor Settings
   "editor.formatOnPaste": false,
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
@@ -73,20 +78,21 @@
   // Github Copilot
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
-    "*": true,
+    "*": false,
+    "ts": false,
     "gdscript": false
   },
   // Vim
   "vim.leader": "'",
   "vim.useSystemClipboard": true,
-  "vim.useCtrlKeys": false,
+  "vim.useCtrlKeys": true,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["<leader>", "v"],
+      "before": ["<leader>", "e"],
       "commands": ["workbench.action.toggleSidebarVisibility"]
     },
     {
-      "before": ["<leader>", "V"],
+      "before": ["<leader>", "o"],
       "commands": ["revealInExplorer"]
     },
     {
@@ -101,6 +107,6 @@
   "editor.cursorBlinking": "phase",
   "editor.cursorSmoothCaretAnimation": true,
   "editor.formatOnSave": true,
-  "files.autoSave": "afterDelay",
-  "material-icon-theme.folders.theme": "specific"
+  "material-icon-theme.folders.theme": "specific",
+  "editor.fontSize": 14
 }

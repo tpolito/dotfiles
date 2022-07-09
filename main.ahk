@@ -1,4 +1,4 @@
- ; Main AHK
+; Main AHK
 ; Current Date/Time Script
 ^!q::
 FormatTime, CurrentDateTime,, yyyy-M-d
@@ -43,8 +43,15 @@ return
 ; F13 - Mute / F14 - Mute & Deafen
 PrintScreen::F13
 Pause::F14
-NumpadHome::F13
-NumpadUp::F14
+;NumpadHome::F13
+;NumpadUp::F14
+
+; 65% Keyboard Remaps
+; Alt + Home -> End
+<!Home::End
+
+; Insert = F13
+Insert::F13
 
 ; Select Current Line
 !a:: SelectCurrentLine()
