@@ -78,8 +78,8 @@
   // Github Copilot
   "editor.inlineSuggest.enabled": true,
   "github.copilot.enable": {
-    "*": false,
-    "ts": false,
+    "*": true,
+    "lua": false,
     "gdscript": false
   },
   // Vim
@@ -108,5 +108,7 @@
   "editor.cursorSmoothCaretAnimation": true,
   "editor.formatOnSave": true,
   "material-icon-theme.folders.theme": "specific",
-  "editor.fontSize": 14
+  "editor.fontSize": 14,
+  "vscode-neovim.useWSL": true,
+  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim"
 }
