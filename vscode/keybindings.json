@@ -27,6 +27,11 @@
     "when": "listFocus && !inputFocus"
   },
   {
+    "key": "shift+k",
+    "command": "editor.action.showHover",
+    "when": "editorTextFocus && vim.active && vim.mode != 'Insert'"
+  },
+  {
     "key": "ctrl+j",
     "command": "list.focusDown",
     "when": "listFocus && !inputFocus"
