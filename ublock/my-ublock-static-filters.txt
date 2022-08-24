@@ -1,0 +1,58 @@
+! BLOCK TOXIC SITES
+https://www.teamblind.com/
+https://twitter.com/
+! https://twitter.com - Shouldn't need these
+twitter.com##.r-6416eg.r-o7ynqc.r-1f1sjgu.r-ymttw5.r-1ny4l3l.r-1loqt21.css-1dbjc4n
+twitter.com##div.r-1ny4l3l.r-1adg3ll.css-1dbjc4n > .r-6416eg.r-o7ynqc.r-1yzf0co.r-ymttw5.r-1ny4l3l.r-1loqt21.css-1dbjc4n.css-18t94o4.css-4rbku5
+twitter.com##div.r-1ny4l3l.r-1adg3ll.css-1dbjc4n > .r-1f1sjgu.r-ymttw5.r-1ny4l3l.r-1wtj0ep.css-1dbjc4n
+twitter.com##.r-ymttw5.r-1w6e6rj.r-18u37iz.css-1dbjc4n
+twitter.com##.r-6416eg.r-o7ynqc.r-1yzf0co.r-ymttw5.r-1ny4l3l.r-1loqt21.r-1moyyf3.r-1pp923h.css-1dbjc4n.css-18t94o4.css-4rbku5
+twitter.com##.r-1h3ijdo.r-1qk6wnv.r-c67a83.r-ii8lfi.r-1e5uvyk.css-1dbjc4n > .r-13qz1uu.r-ymttw5.r-sb58tz.r-1jgb5lz.r-1777fci.r-1h3ijdo.r-18u37iz.r-1awozwy.css-1dbjc4n
+twitter.com##.r-cgjvx2.r-1loqt21.r-1qk6wnv.r-c67a83.r-f6ebdl.css-1dbjc4n > .r-136ojw6.r-1h3ijdo.css-1dbjc4n
+
+! https://www.youtube.com
+! Hide misc buttons and pannels I don't want
+www.youtube.com##.ytd-mini-guide-entry-renderer.style-scope.yt-simple-endpoint
+www.youtube.com##ytd-mini-guide-renderer.ytd-app.style-scope
+www.youtube.com###guide-button
+www.youtube.com###guide-button
+www.youtube.com###secondary
+www.youtube.com###button > .ytd-topbar-menu-button-renderer.style-scope
+www.youtube.com##ytd-guide-section-renderer.ytd-guide-renderer.style-scope:nth-of-type(1)
+www.youtube.com##ytd-guide-section-renderer.ytd-guide-renderer.style-scope:nth-of-type(2)
+www.youtube.com##ytd-guide-section-renderer.ytd-guide-renderer.style-scope:nth-of-type(3)
+www.youtube.com###guide-links-primary
+www.youtube.com###guide-links-secondary
+www.youtube.com##.ytd-topbar-logo-renderer.style-scope > .ytd-logo.style-scope
+www.youtube.com###guide-inner-content
+www.youtube.com###guide-content
+www.youtube.com###contentContainer > .ytd-app.style-scope
+www.youtube.com##.tp-yt-app-drawer.style-scope
+www.youtube.com###voice-search-button > .size-default.style-default.ytd-masthead.style-scope > .ytd-button-renderer.style-scope.yt-simple-endpoint > .size-default.style-default.ytd-button-renderer.style-scope
+! Hide non-relevant search results
+www.youtube.com##ytd-search ytd-shelf-renderer:has(h2:has-text(People also watched))
+www.youtube.com##ytd-search ytd-shelf-renderer:has(h2:has-text(For you))
+www.youtube.com##ytd-search ytd-shelf-renderer:has(h2:has-text(Previously watched))
+www.youtube.com##ytd-search ytd-shelf-renderer:has(h2:has-text(Results for similar searches))
+www.youtube.com##ytd-search ytd-shelf-renderer:has(h2:has-text(New for you))
+! Hide unused buttons (useful for vertical monitors)
+www.youtube.com##ytd-toggle-button-renderer:has(yt-formatted-string:has-text(Dislike))
+www.youtube.com##ytd-button-renderer:has(yt-formatted-string:has-text(Share))
+www.youtube.com##ytd-button-renderer:has(yt-formatted-string:has-text(Thanks))
+www.youtube.com##ytd-button-renderer:has(yt-formatted-string:has-text(Clip))
+
+! https://www.twitch.tv
+www.twitch.tv##div.gYlqgQ.Layout-sc-nxg1ff-0:nth-of-type(2)
+www.twitch.tv##div.side-nav-section.dzgehN.Layout-sc-nxg1ff-0:nth-of-type(2)
+www.twitch.tv##.bCvRPD.Layout-sc-nxg1ff-0 > .dWAnXP.Layout-sc-nxg1ff-0 > div
+www.twitch.tv##div.side-nav-section.dzgehN.Layout-sc-nxg1ff-0:nth-of-type(3)
+www.twitch.tv##div.eMqFIm.Layout-sc-nxg1ff-0:nth-of-type(2)
+www.twitch.tv##.jxiAGm.ScSvg-sc-cdc1ai-2 > g > .kswvAb.ScBody-sc-cdc1ai-3
+www.twitch.tv##.jxiAGm.ScSvg-sc-cdc1ai-2
+www.twitch.tv##.cMtTuh.Layout-sc-nxg1ff-0
+! Remove "Recommended Channels" & "... Viewers Also Watch"
+www.twitch.tv##div.side-nav-section:nth-of-type(2)
+www.twitch.tv##div.side-nav-section:nth-of-type(3)
+! Remove specific twitch channels - www.twitch.tv##.tw-tower > div:has(a[href="/channelname/videos"])
+www.twitch.tv##.tw-tower > div:has(a[href="/openbootcamp/videos"])
+
