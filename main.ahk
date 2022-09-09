@@ -54,7 +54,7 @@ Pause::F14
 Insert::F13
 
 ; Select Current Line
-!a:: SelectCurrentLine()
+; !a:: SelectCurrentLine()
 
 SelectCurrentLine() {
   SendInput {End}

@@ -104,11 +104,23 @@
       "commands": ["workbench.action.terminal.toggleTerminal"]
     }
   ],
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["$"],
+      "after": ["g", "_"]
+    },
+    {
+      "before": ["g", "_"],
+      "after": ["$"]
+    }
+  ],
+  "material-icon-theme.folders.theme": "specific",
   "editor.cursorBlinking": "phase",
   "editor.cursorSmoothCaretAnimation": true,
   "editor.formatOnSave": true,
-  "material-icon-theme.folders.theme": "specific",
   "editor.fontSize": 14,
-  "vscode-neovim.useWSL": true,
-  "vscode-neovim.neovimExecutablePaths.linux": "/usr/bin/nvim"
+  "editor.lineNumbers": "relative",
+  "zenMode.fullScreen": false,
+  "zenMode.hideTabs": false,
+  "zenMode.centerLayout": false
 }
