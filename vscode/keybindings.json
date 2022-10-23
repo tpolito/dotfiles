@@ -27,6 +27,11 @@
     "when": "terminalFocus"
   },
   {
+    "key": "ctrl+w",
+    "command": "workbench.action.closeActiveEditor",
+    "when": "editorTextFocus && vim.mode !== 'Insert'"
+  },
+  {
     "key": "ctrl+shift+\\",
     "command": "workbench.action.terminal.split",
     "when": "terminalFocus"

@@ -1,14 +1,8 @@
 {
-  "terminal.integrated.profiles.windows": {
-    "Nu Shell": {
-      "path": "C:\\Users\\Tyler\\nu\\nushell-0.32.0\\nu.exe"
-    }
-  },
   "terminal.integrated.fontFamily": "monospace",
   "terminal.integrated.fontSize": 14,
-  "terminal.integrated.defaultProfile.windows": "Nu Shell",
   "editor.tabSize": 2,
-  "editor.fontFamily": "JetBrains Mono",
+  "editor.fontFamily": "JetBrainsMono Nerd Font Mono",
   "editor.fontLigatures": true,
   "editor.wordWrap": "on",
   "editor.suggestSelection": "first",
@@ -26,7 +20,7 @@
     "editorBracketHighlight.foreground6": "#87ceeb"
   },
   "workbench.colorTheme": "One Dark Pro Flat",
-  "workbench.iconTheme": "material-icon-theme",
+  "workbench.iconTheme": "bearded-icons",
   "gitlens.gitCommands.skipConfirmations": [
     "fetch:command",
     "switch:command",
@@ -102,6 +96,14 @@
     {
       "before": ["<leader>", "t"],
       "commands": ["workbench.action.terminal.toggleTerminal"]
+    },
+    {
+      "before": ["<leader>", "l", "f"],
+      "commands": ["editor.action.formatDocument"]
+    },
+    {
+      "before": ["U"],
+      "after": ["C-r"]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -122,5 +124,11 @@
   "editor.lineNumbers": "relative",
   "zenMode.fullScreen": false,
   "zenMode.hideTabs": false,
-  "zenMode.centerLayout": false
+  "zenMode.centerLayout": false,
+  "[astro]": {
+    "editor.defaultFormatter": "astro-build.astro-vscode"
+  },
+  // GODOT 4 Server
+  "godot_tools.gdscript_lsp_server_port": 6005,
+  "diffEditor.ignoreTrimWhitespace": false
 }

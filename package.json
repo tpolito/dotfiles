@@ -1,0 +1,20 @@
+{
+  "name": "dotfiles",
+  "version": "1.0.0",
+  "description": "1. main.ahk is my utility based AutoHotKey file that I use on all my Window machines\r 2. Neovim configurations I use across various Linux/MacOS/Windows machines",
+  "main": "index.js",
+  "scripts": {
+    "backup": "node ./backup.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tpolito/dotfiles.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tpolito/dotfiles/issues"
+  },
+  "homepage": "https://github.com/tpolito/dotfiles#readme"
+}
