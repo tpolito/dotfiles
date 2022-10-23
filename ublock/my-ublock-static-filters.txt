@@ -55,4 +55,3 @@ www.twitch.tv##div.side-nav-section:nth-of-type(2)
 www.twitch.tv##div.side-nav-section:nth-of-type(3)
 ! Remove specific twitch channels - www.twitch.tv##.tw-tower > div:has(a[href="/channelname/videos"])
 www.twitch.tv##.tw-tower > div:has(a[href="/openbootcamp/videos"])
-
