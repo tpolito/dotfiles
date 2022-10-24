@@ -61,6 +61,16 @@
     "command": "list.focusDown",
     "when": "listFocus && !inputFocus"
   },
+  // {
+  //   "key": "ctrl+o",
+  //   "command": "workbench.action.navigateBack",
+  //   "when": "canNavigateBack && vim.mode != 'Insert'"
+  // },
+  // {
+  //   "key": "ctrl+shift+o",
+  //   "command": "workbench.action.navigateForward",
+  //   "when": "canNavigateForward && vim.mode != 'Insert'"
+  // },
   {
     "key": "tab",
     "command": "selectNextSuggestion",

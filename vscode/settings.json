@@ -102,6 +102,10 @@
       "commands": ["editor.action.formatDocument"]
     },
     {
+      "before": ["<leader>", "s", "s"],
+      "commands": ["workbench.action.files.saveWithoutFormatting"]
+    },
+    {
       "before": ["U"],
       "after": ["C-r"]
     }
