@@ -82,11 +82,7 @@
   "vim.useCtrlKeys": false,
   "vim.normalModeKeyBindingsNonRecursive": [
     {
-      "before": ["<leader>", "o"],
-      "commands": ["revealInExplorer"]
-    },
-    {
-      "before": ["<leader>", "f"],
+      "before": ["<leader>", "f", "f"],
       "commands": ["workbench.action.quickOpen"]
     },
     {
@@ -111,11 +107,11 @@
     },
     {
       "before": ["<leader>", "e"],
-      "commands": ["vscode-harpoon.editEditors"]
+      "commands": ["workbench.files.action.focusFilesExplorer"]
     },
     {
       "before": ["<leader>", "p", "e"],
-      "commands": ["vscode-harpoon.editorQuickPick"]
+      "commands": ["vscode-harpoon.editEditors"]
     },
     {
       "before": ["<leader>", "1"],
@@ -155,6 +151,5 @@
   // GODOT 4 Server
   "godot_tools.gdscript_lsp_server_port": 6005,
   "diffEditor.ignoreTrimWhitespace": false,
-  "typescript.updateImportsOnFileMove.enabled": "never",
-  "svelte.plugin.svelte.note-new-transformation": false
+  "typescript.updateImportsOnFileMove.enabled": "never"
 }
