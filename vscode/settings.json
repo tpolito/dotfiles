@@ -19,6 +19,8 @@
     "editorBracketHighlight.foreground5": "#da70d6",
     "editorBracketHighlight.foreground6": "#87ceeb"
   },
+  "editor.guides.bracketPairs": true,
+  "editor.guides.bracketPairsHorizontal": false,
   "workbench.colorTheme": "One Dark Pro Flat",
   "workbench.iconTheme": "bearded-icons",
   "gitlens.gitCommands.skipConfirmations": [
@@ -99,7 +101,11 @@
     },
     {
       "before": ["U"],
-      "after": ["C-r"]
+      "after": ["redo"]
+    },
+    {
+      "before": ["u"],
+      "commands": ["undo"]
     },
     {
       "before": ["<leader>", "a"],
@@ -138,7 +144,7 @@
   ],
   "material-icon-theme.folders.theme": "specific",
   "editor.cursorBlinking": "phase",
-  "editor.cursorSmoothCaretAnimation": true,
+  "editor.cursorSmoothCaretAnimation": "on",
   "editor.formatOnSave": true,
   "editor.fontSize": 14,
   "editor.lineNumbers": "relative",
