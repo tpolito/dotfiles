@@ -40,6 +40,27 @@ www.youtube.com##ytd-toggle-button-renderer:has(yt-formatted-string:has-text(Dis
 www.youtube.com##ytd-button-renderer:has(yt-formatted-string:has-text(Share))
 www.youtube.com##ytd-button-renderer:has(yt-formatted-string:has-text(Thanks))
 www.youtube.com##ytd-button-renderer:has(yt-formatted-string:has-text(Clip))
+! Block Youtube Home Page
+||www.youtube.com/^$document
+! Block Youtube Shorts
+www.youtube.com##ytd-guide-renderer a.yt-simple-endpoint path[d^="M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33c-.77-.32-1.2-.5-1.2-.5L18"]:upward(ytd-guide-entry-renderer)
+www.youtube.com##ytd-mini-guide-renderer a.yt-simple-endpoint path[d^="M10 14.65v-5.3L15 12l-5 2.65zm7.77-4.33c-.77-.32-1.2-.5-1.2-.5L18"]:upward(ytd-mini-guide-entry-renderer)
+www.youtube.com##ytd-browse #dismissible ytd-rich-grid-slim-media[is-short]:upward(ytd-rich-section-renderer)
+www.youtube.com##ytd-browse[page-subtype="home"] ytd-rich-item-renderer:has(.ytd-thumbnail[href^="/shorts/"])
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-grid-video-renderer:has(.ytd-thumbnail[href^="/shorts/"])
+www.youtube.com##ytd-search ytd-video-renderer:has(.ytd-thumbnail[href^="/shorts/"])
+www.youtube.com##ytd-watch-next-secondary-results-renderer ytd-compact-video-renderer:has(.ytd-thumbnail[href^="/shorts/"])
+www.youtube.com##ytd-watch-next-secondary-results-renderer ytd-shelf-renderer:has(.ytd-thumbnail[href^="/shorts/"])
+www.youtube.com##ytd-browse[page-subtype="subscriptions"] ytd-video-renderer .ytd-thumbnail[href^="/shorts/"]:upward(ytd-item-section-renderer)
+www.youtube.com##ytd-browse[page-subtype="channels"] #contents.ytd-reel-shelf-renderer:upward(ytd-item-section-renderer)
+www.youtube.com##ytd-search #contents ytd-reel-shelf-renderer
+m.youtube.com##ytm-reel-shelf-renderer
+m.youtube.com##ytm-pivot-bar-renderer div.pivot-shorts:upward(ytm-pivot-bar-item-renderer)
+m.youtube.com##ytm-browse ytm-item-section-renderer ytm-video-with-context-renderer:has(ytm-thumbnail-overlay-time-status-renderer[data-style="SHORTS"])
+m.youtube.com##ytm-browse ytm-item-section-renderer ytm-compact-video-renderer:has(ytm-thumbnail-overlay-time-status-renderer[data-style="SHORTS"])
+m.youtube.com##ytm-search ytm-compact-video-renderer:has(ytm-thumbnail-overlay-time-status-renderer[data-style="SHORTS"])
+m.youtube.com##ytm-single-column-watch-next-results-renderer ytm-video-with-context-renderer:has(ytm-thumbnail-overlay-time-status-renderer span:has-text(/^(0:\d\d|1:0\d)$/))
+
 
 ! https://www.twitch.tv
 www.twitch.tv##div.gYlqgQ.Layout-sc-nxg1ff-0:nth-of-type(2)
@@ -50,8 +71,17 @@ www.twitch.tv##div.eMqFIm.Layout-sc-nxg1ff-0:nth-of-type(2)
 www.twitch.tv##.jxiAGm.ScSvg-sc-cdc1ai-2 > g > .kswvAb.ScBody-sc-cdc1ai-3
 www.twitch.tv##.jxiAGm.ScSvg-sc-cdc1ai-2
 www.twitch.tv##.cMtTuh.Layout-sc-nxg1ff-0
+www.twitch.tv##.bAGwnI.Layout-sc-1xcs6mc-0
+www.twitch.tv##div.side-nav-section.bSoSIm.Layout-sc-1xcs6mc-0:nth-of-type(3)
+www.twitch.tv##div.eSWdAT.Layout-sc-1xcs6mc-0:nth-of-type(2)
+www.twitch.tv##.tw-animated-glitch-logo.kHJBYG.ScLogoContainer-sc-mx5axi-0
+www.twitch.tv##div.side-nav-section.bSoSIm.Layout-sc-1xcs6mc-0:nth-of-type(4)
 ! Remove "Recommended Channels" & "... Viewers Also Watch"
-www.twitch.tv##div.side-nav-section:nth-of-type(2)
-www.twitch.tv##div.side-nav-section:nth-of-type(3)
+www.twitch.tv##div.side-nav-section.cIfBon.Layout-sc-nxg1ff-0:nth-of-type(3)
+www.twitch.tv##div.side-nav-section.cIfBon.Layout-sc-nxg1ff-0:nth-of-type(4)
 ! Remove specific twitch channels - www.twitch.tv##.tw-tower > div:has(a[href="/channelname/videos"])
-www.twitch.tv##.tw-tower > div:has(a[href="/openbootcamp/videos"])
+www.twitch.tv##.tw-tower > div:has(a[href="/kinggothalion/videos"])
+
+! 2023-02-16 https://eldenring.wiki.fextralife.com
+||embed.twitch.tv/?channel=fextralife&height=398&layout=video-with-chat&muted=true&parent=eldenring.wiki.fextralife.com&referrer=https%3A%2F%2Feldenring.wiki.fextralife.com%2FSiluria%27s%2BTree&theme=dark&width=340$subdocument
+
