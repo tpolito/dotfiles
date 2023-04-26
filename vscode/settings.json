@@ -21,7 +21,7 @@
   },
   "editor.guides.bracketPairs": true,
   "editor.guides.bracketPairsHorizontal": false,
-  "workbench.colorTheme": "One Dark Pro Flat",
+  "workbench.colorTheme": "Dracula",
   "workbench.iconTheme": "bearded-icons",
   "gitlens.gitCommands.skipConfirmations": [
     "fetch:command",
@@ -101,7 +101,7 @@
     },
     {
       "before": ["U"],
-      "after": ["redo"]
+      "commands": ["redo"]
     },
     {
       "before": ["u"],
@@ -130,6 +130,10 @@
     {
       "before": ["<leader>", "3"],
       "commands": ["vscode-harpoon.gotoEditor3"]
+    },
+    {
+      "before": ["<leader>", "r"],
+      "commands": ["mdb.runPlayground "]
     }
   ],
   "vim.visualModeKeyBindingsNonRecursive": [
@@ -157,5 +161,7 @@
   // GODOT 4 Server
   "godot_tools.gdscript_lsp_server_port": 6005,
   "diffEditor.ignoreTrimWhitespace": false,
-  "typescript.updateImportsOnFileMove.enabled": "never"
+  "typescript.updateImportsOnFileMove.enabled": "never",
+  "mdb.confirmRunAll": false,
+  "terminal.integrated.env.linux": {}
 }
