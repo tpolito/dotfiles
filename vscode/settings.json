@@ -6,6 +6,7 @@
   "editor.fontLigatures": true,
   "editor.wordWrap": "on",
   "editor.suggestSelection": "first",
+  "editor.minimap.renderCharacters": false,
   // Bracker Pair Colorizer
   "editor.bracketPairColorization.enabled": true,
   "workbench.colorCustomizations": {
