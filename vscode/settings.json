@@ -164,5 +164,6 @@
   "diffEditor.ignoreTrimWhitespace": false,
   "typescript.updateImportsOnFileMove.enabled": "never",
   "mdb.confirmRunAll": false,
-  "terminal.integrated.env.linux": {}
+  "terminal.integrated.env.linux": {},
+  "console-ninja.showWhatsNew": false
 }
