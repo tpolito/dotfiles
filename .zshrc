@@ -101,6 +101,7 @@ alias gs="git status"
 alias c="clear"
 alias gaa="git add ."
 alias gc="git commit -m $2"
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 alias tm="tmux"
 alias tmnw="tmux new-window"
 
